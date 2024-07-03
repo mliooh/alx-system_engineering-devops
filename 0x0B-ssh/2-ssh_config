@@ -1,0 +1,12 @@
+#This guide helps you configure your SSH client to use a specific private key for authentication and disable password authentication. This setup enhances security by ensuring only authorized users with the private key can access the server.
+
+#Open or create the SSH configuration file named config in ~/.ssh/.
+
+#Add Configuration:
+Host SERVER 
+    #HostName your_server_ip_or_hostname
+    #User ubuntu
+    #IdentityFile ~/.ssh/school
+    #PasswordAuthentication no
+
+    
