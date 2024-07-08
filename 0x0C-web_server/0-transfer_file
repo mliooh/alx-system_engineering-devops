@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#if  less than 3 parameters passed
+if [ $# -lt 4 ];
+echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+exit 1
+fi
+
+#variables
+PATH_TO_FILE="$1"
+IP="$2"
+USERNAME="$3"
+PATH_TO_SSH_KEY="$4"
+
+# Transfer file using scp 
+scp -o StrictHostKeyChecking=no -i "$path_to_ssh_key" "$path_to_file" "$username"@"$ip":~/
